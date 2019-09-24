@@ -1,0 +1,16 @@
+name: Stack Image test
+
+on: [push]
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v1
+    - name: Stack action step
+      uses: ynishi/github-actions-stack-docker-action
+      with:
+        command: '--version'
