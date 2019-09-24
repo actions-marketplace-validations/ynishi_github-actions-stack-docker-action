@@ -1,0 +1,14 @@
+# action.yml
+name: 'Stack Image'
+description: 'Stack Image'
+inputs:
+  command:
+    description: 'Command for stack'
+    required: true
+    default: 'build'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args: 
+    - ${{ inputs.command }}
+
