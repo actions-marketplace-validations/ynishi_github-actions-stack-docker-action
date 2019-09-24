@@ -6,9 +6,13 @@ inputs:
     description: 'Command for stack'
     required: true
     default: 'build'
+  packages:
+    description: 'additional apt packages to build(separated by space)'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args: 
     - ${{ inputs.command }}
+    - APT_PACKAGES=${{ inputs.packages }}
 
