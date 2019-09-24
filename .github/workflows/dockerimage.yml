@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Stack action step
-      uses: ynishi/github-actions-stack-docker-action
+      uses: ynishi/github-actions-stack-docker-action@v1
       with:
         command: '--version'
